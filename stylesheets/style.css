@@ -1,0 +1,64 @@
+* {
+  line-height: 140%;
+}
+
+html {
+  font-size: 62.5%;
+  /* 
+    Sets the base font size of the entire webpage.
+    62.5% of the default 16px = 10px, which makes rem units easier to calculate.
+     Example: 1.6rem = 16px, 2rem = 20px. */
+}
+#MP-logo-container {
+  padding: 10px;
+  position: relative;
+  width: 100px;
+  height: 80px;
+  overflow: hidden; /*prevents zoomed images from overflowing the container */
+  border-radius: 50px; /* makes the container circular */
+}
+
+#MP-logo-container img {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+#MP-logo-container img:hover {
+  transform: scale(1.15); /* zooms image to 115% */
+}
+#nav-links {
+  transition: color 0.3s ease;
+  padding: 10px;
+  gap: 30px;
+  list-style: none;
+  /* Space inside the nav container. */
+}
+.nav-item {
+  text-decoration: none;
+}
+nav a {
+  color: #f5f5f5;
+  background-color: #333333;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+  /* Space inside the nav container. */
+  list-style: none;
+  width: 80px;
+}
+
+#nav-links .nav-item:hover {
+  color: #f5a623;
+}
+div.client-logo {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  background-color: #7a7a7a;
+}
+
+div.client-logo img {
+  max-width: 100%;
+  height: auto;
+}
