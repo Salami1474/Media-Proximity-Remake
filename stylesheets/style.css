@@ -12,10 +12,15 @@ html {
 #MP-logo-container {
   padding: 10px;
   position: relative;
-  width: 100px;
-  height: 80px;
+  width: 150px;
+  height: 120px;
   overflow: hidden; /*prevents zoomed images from overflowing the container */
   border-radius: 50px; /* makes the container circular */
+}
+body {
+  font-size: 1.4rem;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
 }
 
 #MP-logo-container img {
@@ -26,31 +31,59 @@ html {
 }
 
 #MP-logo-container img:hover {
-  transform: scale(1.15); /* zooms image to 115% */
+  transform: scale(1.1); /* zooms image to 110% */
 }
 #nav-links {
   transition: color 0.3s ease;
-  padding: 10px;
-  gap: 30px;
+  padding: 20px 20px;
+
   list-style: none;
-  /* Space inside the nav container. */
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
 .nav-item {
-  text-decoration: none;
+  justify-content: space-between;
+  gap: 20px;
 }
 nav a {
   color: #f5f5f5;
   background-color: #333333;
-  transition: color 0.3s ease;
-  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  padding: 15px 20px;
   /* Space inside the nav container. */
-  list-style: none;
-  width: 80px;
+  width: 95%;
+  text-decoration: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  align-items: space-between;
+}
+nav a:hover {
+  background-color: #f5a623;
+  color: #333333;
+  border: 1px solid #333333;
+  transition: ease-in-out 0.3s;
+  -webkit-transition: background-color 0.3s ease;
+  /* For older browsers (Chrome, Safari) */
+  -moz-transition: background-color 0.3s ease;
+  /* For older versions of Firefox */
+  -o-transition: background-color 0.3s ease;
+  /* For older versions of Opera */
 }
 
-#nav-links .nav-item:hover {
-  color: #f5a623;
-}
 div.client-logo {
   display: inline-block;
   text-align: center;
@@ -61,4 +94,42 @@ div.client-logo {
 div.client-logo img {
   max-width: 100%;
   height: auto;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: #f3a72d;
+  color: #333333;
+  text-align: center;
+  border: 5px solid #333333;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  display: inline-block;
+  transform: translateX(-50%); /* Pulls it back to perfectly center it. */
+  -webkit-transform: translateX(
+    50%
+  ); /* Pulls it back to perfectly center it (for older browsers). */
+  -moz-transform: translateX(
+    -50%
+  ); /* Pulls it back to perfectly center it (for older browsers). */
+  -ms-transform: translateX(
+    -50%
+  ); /* Pulls it back to perfectly center it (for older browsers). */
+  -o-transform: translateX(
+    -50%
+  ); /* Pulls it back to perfectly center it (for older browsers). */
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
