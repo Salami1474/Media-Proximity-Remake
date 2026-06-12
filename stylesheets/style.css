@@ -1,504 +1,961 @@
+/* 
+  The @media properties help to control how the layout 
+  looks like for tablet and phone screens.
+*/
+
 * {
+  /* Controls the 'line-height' CSS property. */
   line-height: 140%;
 }
 
 html {
+  /* Sets the size of the text. */
   font-size: 62.5%;
   /* 
+
     Sets the base font size of the entire webpage.
     62.5% of the default 16px = 10px, which makes rem units easier to calculate.
-    Example: 1.6rem = 16px, 2rem = 20px.
   */
+
+  /* Controls the 'scroll-behavior' CSS property. */
   scroll-behavior: smooth;
 }
 #mp-logo-container {
+  /* Creates space inside the element. */
   padding: 15px 10px;
+  /* Defines the positioning method. */
   position: relative;
+  /* Controls the width of the element. */
   width: 150px;
+  /* Controls the height of the element. */
   height: 120px;
+  /* Controls how overflowing content behaves. */
   overflow: hidden; /*prevents zoomed images from overflowing the container */
+  /* Rounds the corners of the element. */
   border-radius: 50px; /* makes the container circular */
 }
 body {
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Sets the text colour. */
   color: #1a1a1a;
+  /* Controls the width of the element. */
   width: 95%;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Defines the font used for text. */
   font-family: "Georgia", "Times New Roman", Times, serif;
+  /* Controls the 'letter-spacing' CSS property. */
   letter-spacing: 0.02em;
+  /* Controls the 'word-spacing' CSS property. */
   word-spacing: 0.05em;
+  /* Controls the 'animation' CSS property. */
   animation: fadeInBody 1s ease-in;
   /* Adds a fade-in animation to the body when the page loads. */
+  /* Controls the '-webkit-animation' CSS property. */
   -webkit-animation: fadeInBody 1s ease-in;
   /* For older browsers (Chrome, Safari) */
+  /* Controls the '-moz-animation' CSS property. */
   -moz-animation: fadeInBody 1s ease-in;
   /* For older versions of Firefox */
+  /* Controls the '-o-animation' CSS property. */
   -o-animation: fadeInBody 1s ease-in;
   /* For older versions of Opera */
 }
 @keyframes fadeInBody {
   /* Defines the fade-in animation for the body */
   from {
+    /* Controls the 'opacity' CSS property. */
     opacity: 0.1;
     /* Starts slightly transparent */
   }
   to {
+    /* Controls the 'opacity' CSS property. */
     opacity: 1;
     /* Ends fully opaque */
   }
 }
 
 #mp-logo-container img {
+  /* Controls stacking order of overlapping elements. */
   z-index: 999;
+  /* Controls the width of the element. */
   width: 75%;
+  /* Controls the height of the element. */
   height: 75%;
+  /* Creates smooth animated changes. */
   transition: transform 0.8s ease-in-out;
 }
 
 #mp-logo-container img:hover {
+  /* Applies visual transformations. */
   transform: scale(1.1); /* zooms image to 110% */
 }
 @media (max-width: 600px) {
   /* Adjusts styles for smaller screens (mobile devices) */
   #mp-logo-container {
+    /* Controls the width of the element. */
     width: 120px;
+    /* Controls the height of the element. */
     height: 100px;
   }
   #mp-logo-container img {
+    /* Controls the width of the element. */
     width: 80%;
+    /* Controls the height of the element. */
     height: 80%;
   }
 }
 @media (min-width: 1200px) {
   /* Adjusts styles for larger screens (desktops) */
   #mp-logo-container {
+    /* Controls the width of the element. */
     width: 200px;
+    /* Controls the height of the element. */
     height: 150px;
   }
   #mp-logo-container img {
+    /* Controls the width of the element. */
     width: 70%;
+    /* Controls the height of the element. */
     height: 70%;
   }
 }
 
 #nav-links {
+  /* Creates smooth animated changes. */
   transition: color 0.3s ease;
+  /* Creates space inside the element. */
   padding: 20px 20px;
 
+  /* Controls list bullet styling. */
   list-style: none;
+  /* Sets the background colour of the element. */
   background-color: #f5f5f5;
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Sets the direction of flex items. */
   flex-direction: row;
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Adds a border around the element. */
   border: 1px solid #d9d9d9;
+  /* Rounds the corners of the element. */
   border-radius: 10px;
+  /* Defines the font used for text. */
   font-family: "Georgia", "Times New Roman", Times, serif;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Controls the '-webkit-border-radius' CSS property. */
   -webkit-border-radius: 20px;
+  /* Controls the '-moz-border-radius' CSS property. */
   -moz-border-radius: 20px;
+  /* Sets the direction of flex items. */
   flex-direction: row;
+  /* Aligns items along the main axis. */
   justify-content: center;
+  /* Creates space between items. */
   gap: 1rem;
+  /* Controls the 'flex-wrap' CSS property. */
   flex-wrap: wrap;
+  /* Creates space above the element. */
   margin-top: 20px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 700px) {
   #nav-links {
+    /* Sets the direction of flex items. */
     flex-direction: column;
+    /* Creates space between items. */
     gap: 25px;
+    /* Aligns items along the cross axis. */
     align-items: center;
   }
 }
 
 nav a {
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Sets the text colour. */
   color: #f5f5f5;
+  /* Sets the background colour of the element. */
   background-color: #333333;
+  /* Creates smooth animated changes. */
   transition: background-color 0.3s ease;
+  /* Creates space inside the element. */
   padding: 12px 24px;
   /* Space inside the nav links. */
+  /* Controls the width of the element. */
   width: 70%;
+  /* Controls text decoration such as underlines. */
   text-decoration: none;
+  /* Rounds the corners of the element. */
   border-radius: 15px;
+  /* Controls the '-webkit-border-radius' CSS property. */
   -webkit-border-radius: 15px;
+  /* Controls the '-moz-border-radius' CSS property. */
   -moz-border-radius: 15px;
 
+  @media (max-width: 900px) {
+    nav a {
+      padding: 12px 20px;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Adds a shadow effect. */
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
 }
+/* Controls the 'nav a' CSS property. */
 nav a:hover,
+/* Controls the 'nav a' CSS property. */
 nav a:focus,
 nav a:active {
+  /* Sets the background colour of the element. */
   background-color: #f5a623;
+  /* Sets the text colour. */
   color: #333333;
+  /* Adds a border around the element. */
   border: 1px solid #333333;
+  /* Creates smooth animated changes. */
   transition: ease-in-out 0.3s;
+  /* Controls the '-webkit-transition' CSS property. */
   -webkit-transition: background-color 0.3s ease;
   /* For older browsers (Chrome, Safari) */
+  /* Controls the '-moz-transition' CSS property. */
   -moz-transition: background-color 0.3s ease;
   /* For older versions of Firefox */
+  /* Controls the '-o-transition' CSS property. */
   -o-transition: background-color 0.3s ease;
   /* For older versions of Opera */
 }
 
 h1 {
+  /* Controls how the element is displayed. */
   display: block;
+  /* Controls the width of the element. */
   width: -webkit-fit-content; /* fallback for older WebKit */
+  /* Controls the width of the element. */
   width: fit-content; /* modern browsers */
+  /* Creates space outside the element. */
   margin: 0 auto; /* centers the block horizontally */
+  /* Controls horizontal text alignment. */
   text-align: center; /* centers text inside the element */
+  /* Sets the size of the text. */
   font-size: 2.4rem;
+  /* Creates space below the element. */
   margin-bottom: 10px;
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Sets the background colour of the element. */
   background-color: #f3a72d;
+  /* Sets the text colour. */
   color: #333333;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 5px solid #333333;
+  /* Creates space inside the element. */
   padding: 10px 15px;
+  /* Rounds the corners of the element. */
   border-radius: 15px;
+  /* Defines the font used for text. */
   font-family: "Georgia", "Times New Roman", Times, serif;
+  /* Defines the positioning method. */
   position: relative;
   /* Enables positioning adjustments. */
 }
 h2 {
+  /* Sets the size of the text. */
   font-size: 2.5rem;
+  /* Creates space below the element. */
   margin-bottom: 8px;
 
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Controls how the element is displayed. */
   display: block;
+  /* Controls the width of the element. */
   width: -webkit-fit-content; /* fallback for older WebKit */
+  /* Controls the width of the element. */
   width: fit-content; /* modern browsers */
+  /* Creates space outside the element. */
   margin: 0 auto; /* centers the block horizontally */
+  /* Controls horizontal text alignment. */
   text-align: center; /* centers text inside the element */
+  /* Sets the text colour. */
   color: #2c2c2c;
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 3px solid #c77400;
+  /* Controls the 'padding-top' CSS property. */
   padding-top: 20px;
 }
 
 h3 {
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Creates space below the element. */
   margin-bottom: 6px;
+  /* Controls how bold the text appears. */
   font-weight: bold;
 }
 
 #mp-image {
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Aligns items along the main axis. */
   justify-content: center;
+  /* Aligns items along the cross axis. */
   align-items: center;
+  /* Creates space below the element. */
   margin-bottom: 20px;
+  /* Controls the 'border-left' CSS property. */
   border-left: 1px solid #fff9f3;
+  /* Controls the 'border-right' CSS property. */
   border-right: 1px solid #fff9f3;
+  /* Controls the 'border-top' CSS property. */
   border-top: 1px solid #1a1a1a;
+  /* Sets the background colour of the element. */
   background-color: #fff9f3;
+  /* Rounds the corners of the element. */
   border-radius: 85px;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 3px solid #f5a623;
 }
 #mp-image img {
+  /* Controls the 'max-width' CSS property. */
   max-width: 100%;
+  /* Controls the height of the element. */
   height: auto;
 }
 section {
+  /* Creates space below the element. */
   margin-bottom: 10px;
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Sets the direction of flex items. */
   flex-direction: column;
+  /* Aligns items along the cross axis. */
   align-items: center;
+  /* Creates space inside the element. */
   padding: 20px;
+  /* Sets the size of the text. */
   font-size: 1.8rem;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Creates space above the element. */
   margin-top: 5px;
 }
-#services-link {
+#works-link {
+  /* Controls how the element is displayed. */
   display: inline-block;
+  /* Creates space above the element. */
   margin-top: 20px;
+  /* Creates space inside the element. */
   padding: 15px 25px;
+  /* Sets the background colour of the element. */
   background-color: #f5a623;
+  /* Sets the text colour. */
   color: #333333;
+  /* Controls text decoration such as underlines. */
   text-decoration: none;
+  /* Rounds the corners of the element. */
   border-radius: 15px;
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Creates smooth animated changes. */
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
 }
-#services-link:hover,
-#services-link:focus,
-#services-link:active {
+/* Controls the '#works-link' CSS property. */
+#works-link:hover,
+/* Controls the '#works-link' CSS property. */
+#works-link:focus,
+#works-link:active {
+  /* Sets the background colour of the element. */
   background-color: #333333;
+  /* Sets the text colour. */
   color: #f5a623;
+  /* Adds a border around the element. */
   border: 1px solid #c77400;
+  /* Creates smooth animated changes. */
   transition: ease-in-out 0.3s;
 }
 #back-to-top {
+  /* Defines the positioning method. */
   position: fixed;
+  /* Positions the element from the bottom. */
   bottom: 20px;
+  /* Positions the element from the right. */
   right: 20px;
+  /* Controls stacking order of overlapping elements. */
   z-index: 999 /* Visual Appearance */;
+  /* Controls the width of the element. */
   width: 50px;
+  /* Controls the height of the element. */
   height: 50px;
+  /* Sets the background colour of the element. */
   background-color: #f3a72d;
+  /* Sets the text colour. */
   color: #ffffff;
+  /* Controls text decoration such as underlines. */
   text-decoration: none;
+  /* Sets the size of the text. */
   font-size: 24px;
 
   /* Centering the arrow inside the button */
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Aligns items along the cross axis. */
   align-items: center;
+  /* Aligns items along the main axis. */
   justify-content: center;
 
   /* Design Details */
+  /* Rounds the corners of the element. */
   border-radius: 50%;
+  /* Adds a shadow effect. */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* Creates smooth animated changes. */
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
 }
 #back-to-top:hover {
+  /* Sets the background colour of the element. */
   background-color: #333333;
+  /* Applies visual transformations. */
   transform: scale(1.1);
 }
 .client-logo {
+  /* Controls how the element is displayed. */
   display: grid;
+  /* Defines the grid column layout. */
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* Creates space between items. */
   gap: 20px;
+  /* Sets the background colour of the element. */
   background-color: #fff9f3;
+  /* Adds a border around the element. */
   border: 1px solid #f5a623;
+  /* Creates space inside the element. */
   padding: 20px;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Creates space below the element. */
   margin-bottom: 10px;
+  /* Controls the width of the element. */
   width: 70%;
 
+  /* Aligns items along the main axis. */
   justify-content: center;
+  /* Aligns items along the cross axis. */
   align-items: center;
+  /* Creates smooth animated changes. */
   transition: transform 0.8s ease-in-out;
 }
 .client-logo:hover {
+  /* Applies visual transformations. */
   transform: scale(1.1);
 }
 h3 {
+  /* Controls horizontal text alignment. */
   text-align: center;
+  /* Sets the text colour. */
   color: #2c2c2c;
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 3px solid #c77400;
+  /* Controls the 'padding-top' CSS property. */
   padding-top: 20px;
 }
 div.client-logo img {
+  /* Controls the 'max-width' CSS property. */
   max-width: 100%;
+  /* Controls the height of the element. */
   height: auto;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Controls how the element is displayed. */
   display: block;
 }
 #clients-section {
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Controls how the element is displayed. */
   display: grid;
+  /* Defines the grid row layout. */
   grid-template-rows: repeat (4, 1fr);
+  /* Defines the grid column layout. */
   grid-template-columns: repeat(3, 1fr);
+  /* Creates space between items. */
   gap: 20px;
+  /* Controls the 'justify-self' CSS property. */
   justify-self: center;
 }
 @media (max-width: 600px) {
   #clients-section {
+    /* Defines the grid column layout. */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 p {
+  /* Controls horizontal text alignment. */
   text-align: center;
 }
 div.info {
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Adds a border around the element. */
   border: 1px solid #c77400;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Creates space inside the element. */
   padding: 20px;
+  /* Controls the width of the element. */
   width: 70%;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Creates space below the element. */
   margin-bottom: 30px;
+  /* Adds a shadow effect. */
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 div.info h2 {
+  /* Sets the text colour. */
   color: #2c2c2c;
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 3px solid #c77400;
+  /* Controls the 'padding-top' CSS property. */
   padding-top: 20px;
 }
 blockquote {
+  /* Controls the 'font-style' CSS property. */
   font-style: italic;
+  /* Controls the 'border-left' CSS property. */
   border-left: 4px solid #c77400;
+  /* Controls the 'padding-left' CSS property. */
   padding-left: 15px;
+  /* Controls the 'margin-left' CSS property. */
   margin-left: 0;
+  /* Controls the 'margin-right' CSS property. */
   margin-right: 0;
+  /* Sets the text colour. */
   color: #555555;
+  /* Sets the size of the text. */
   font-size: 2rem;
 }
 blockquote p {
+  /* Creates space below the element. */
   margin-bottom: 20px;
 }
 blockquote footer {
+  /* Controls horizontal text alignment. */
   text-align: right;
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Sets the text colour. */
   color: #555555;
 }
 
 #bottom-footer {
+  /* Sets the background colour of the element. */
   background-color: #333333;
+  /* Sets the text colour. */
   color: #f5a623;
+  /* Controls horizontal text alignment. */
   text-align: center;
+  /* Creates space inside the element. */
   padding: 20px;
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Controls the 'border-top' CSS property. */
   border-top: 5px solid #c77400;
+  /* Creates space above the element. */
   margin-top: 30px;
+  /* Rounds the corners of the element. */
   border-radius: 15px;
 }
 @media (max-width: 600px) {
   #bottom-footer {
+    /* Sets the size of the text. */
     font-size: 1.4rem;
+    /* Creates space inside the element. */
     padding: 15px;
   }
 }
 #bottom-footer h2 {
+  /* Creates space below the element. */
   margin-bottom: 10px;
+  /* Sets the background colour of the element. */
   background-color: transparent;
+  /* Sets the text colour. */
   color: #f5a623;
 }
 #bottom-footer p {
+  /* Creates space below the element. */
   margin-bottom: 40px;
 }
 #contact-info {
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Sets the direction of flex items. */
   flex-direction: column;
+  /* Aligns items along the cross axis. */
   align-items: center;
+  /* Creates space between items. */
   gap: 10px;
+  /* Controls list bullet styling. */
   list-style: none;
 }
 #contact-info li {
+  /* Creates space inside the element. */
   padding: 10px 15px;
+  /* Rounds the corners of the element. */
   border-radius: 10px;
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Controls horizontal text alignment. */
   text-align: center;
+  /* Creates space below the element. */
   margin-bottom: 20px;
 }
 @media (max-width: 600px) {
   #contact-info li {
+    /* Sets the size of the text. */
     font-size: 1.4rem;
+    /* Creates space inside the element. */
     padding: 8px 12px;
+    /* Controls how the element is displayed. */
     display: grid;
+    /* Defines the grid column layout. */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 #contact-info a {
+  /* Sets the background colour of the element. */
   background-color: #f5a623;
+  /* Sets the text colour. */
   color: #333333;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 5px solid #333333;
+  /* Rounds the corners of the element. */
   border-radius: 10px;
+  /* Creates space inside the element. */
   padding: 10px 15px;
+  /* Controls text decoration such as underlines. */
   text-decoration: none;
+  /* Creates smooth animated changes. */
   transition: background-color 0.3s ease;
+  /* Controls how the element is displayed. */
   display: inline-block;
 }
 @media (max-width: 600px) {
   #contact-info a {
+    /* Sets the size of the text. */
     font-size: 1.4rem;
+    /* Creates space inside the element. */
     padding: 8px 12px;
   }
 }
+/* Controls the '#contact-info a' CSS property. */
 #contact-info a:hover,
+/* Controls the '#contact-info a' CSS property. */
 #contact-info a:focus,
 #contact-info a:active {
+  /* Sets the background colour of the element. */
   background-color: #333333;
+  /* Sets the text colour. */
   color: #f5f5f5;
+  /* Adds a border around the element. */
   border: 1px solid #c77400;
+  /* Creates smooth animated changes. */
   transition: ease-in-out 0.3s;
 }
 #mp-first-paragraph {
+  /* Sets the size of the text. */
   font-size: 1.6rem;
+  /* Sets the text colour. */
   color: #333333;
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Aligns items along the main axis. */
   justify-content: center;
+  /* Controls the 'font-style' CSS property. */
   font-style: italic;
+  /* Creates space below the element. */
   margin-bottom: 30px;
+  /* Controls the 'border-top' CSS property. */
   border-top: 2px solid #c77400;
+  /* Controls the 'padding-top' CSS property. */
   padding-top: 15px;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 2px solid #c77400;
+  /* Controls the 'padding-bottom' CSS property. */
   padding-bottom: 15px;
 }
 .what-we-do {
+  /* Sets the background colour of the element. */
   background-color: #f8f9fa;
+  /* Adds a border around the element. */
   border: 1px solid #c77400;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Controls the width of the element. */
   width: 75%;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Creates space below the element. */
   margin-bottom: 50px;
+  /* Adds a shadow effect. */
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+  /* Creates space inside the element. */
   padding: 20px;
+  /* Sets the size of the text. */
   font-size: 1.8rem;
+  /* Creates smooth animated changes. */
   transition: transform 0.5s ease-in-out;
 }
+/* Controls the '.what-we-do' CSS property when hovered by mouse. */
 .what-we-do:hover,
+/* Controls the '.what-we-do' CSS property when navigated on by the tab key. */
 .what-we-do:focus,
 .what-we-do:active {
+  /* Applies visual transformations. */
   transform: scale(1.05);
 }
 .what-we-do img {
+  /* Controls the 'max-width' CSS property. */
   max-width: 100%;
+  /* Controls the height of the element. */
   height: auto;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Controls how the element is displayed. */
   display: block;
+  /* Rounds the corners of the element. */
   border-radius: 20px;
+  /* Creates smooth animated changes. */
   transition: transform 0.5s ease-in-out;
 }
 .what-we-do:hover img {
+  /* Applies visual transformations. */
   transform: scale(1.1);
 }
 #div-2-list {
+  /* Controls list bullet styling. */
   list-style: none;
+  /* Controls the 'padding-left' CSS property. */
   padding-left: 0;
+  /* Controls how the element is displayed. */
   display: flex;
+  /* Sets the direction of flex items. */
   flex-direction: row;
+  /* Creates space between items. */
   gap: 20px;
+  /* Aligns items along the main axis. */
   justify-content: center;
+  /* Creates space above the element. */
   margin-top: 15px;
+  /* Creates space below the element. */
   margin-bottom: 15px;
+  /* Controls how the element is displayed. */
   display: grid;
+  /* Defines the grid column layout. */
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  /* Creates space between items. */
   gap: 1rem;
 }
+
 @media (max-width: 500px) {
   #div-2-list {
+    /* Defines the grid column layout. */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
+/* Adjusts styles for medium screens (tablets) */
 @media (max-width: 1000px) {
   #div-2-list {
+    /* Defines the grid column layout. */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
+/* Adjusts styles for medium screens (tablets) */
 @media (min-width: 400px) {
   #div-2-list {
+    /* Defines the grid column layout. */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
+/* Controls the '#div-2-list li' CSS property. */
 #div-2-list li:hover,
+/* Controls the '#div-2-list li' CSS property. */
 #div-2-list li:focus,
 #div-2-list li:active {
+  /* Applies visual transformations. */
   transform: scale(1.05);
 }
 #div-2-list li {
+  /* Sets the background colour of the element. */
   background-color: #f5a623;
+  /* Sets the text colour. */
   color: #333333;
+  /* Creates space inside the element. */
   padding: 10px 15px;
+  /* Rounds the corners of the element. */
   border-radius: 10px;
+  /* Controls how bold the text appears. */
   font-weight: bold;
+  /* Controls horizontal text alignment. */
   text-align: center;
+  /* Controls the 'border-bottom' CSS property. */
   border-bottom: 5px solid #333333;
+  /* Controls the 'border-left' CSS property. */
   border-left: 3px solid #333333;
+  /* Controls the width of the element. */
   width: 20%;
+  /* Creates smooth animated changes. */
   transition: transform 0.5s ease-in-out;
 }
 #div-2-list li:hover {
+  /* Applies visual transformations. */
   transform: scale(1.05);
 }
 #div-2-list li {
+  /* Controls the width of the element. */
   width: 50%;
+  /* Creates space outside the element. */
   margin: 0 auto;
+  /* Controls how the element is displayed. */
   display: block;
+}
+
+/* 
+  Accessibility: Strong visible focus indicator for keyboard users.
+  Learnt this accessibility way of coding from research done.
+*/
+nav a:focus-visible,
+#works-link:focus-visible,
+#contact-info a:focus-visible,
+#back-to-top:focus-visible {
+  outline: 3px solid #c77400;
+  /* How much space the outline is away from the element.*/
+  outline-offset: 3px;
+}
+
+/* 
+  Accessibility: Respect users who prefer reduced motion. 
+  Learnt this accessibility way of coding from research done.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+form {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #c77400;
+  border-radius: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #c77400;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #f5a623;
+  color: #333333;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  /* */
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #333333;
+  color: #f5a623;
+}
+
+/* Accessibility */
+form input:focus-visible,
+form textarea:focus-visible,
+form button:focus-visible {
+  outline: 3px solid #c77400;
+  /* How much space the outline is away from the element.*/
+  outline-offset: 3px;
+}
+/* Mobile Phones */
+@media (max-width: 600px) {
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 1.4rem;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  form {
+    width: 85%;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  form {
+    width: 60%;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
 }
